@@ -4,15 +4,15 @@
   if(!holder) return;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduced) return;
-  const count = 10;
+  const count = 20;
   for(let i=0;i<count;i++){
     const s = document.createElement('span');
-    const size = (2 + Math.random()*1.8).toFixed(1);
+    const size = (2 + Math.random()*3).toFixed(1);
     s.style.setProperty('--size', size+'px');
     s.style.setProperty('--left', (Math.random()*100).toFixed(1)+'%');
-    s.style.setProperty('--dur', (11 + Math.random()*8).toFixed(1)+'s');
+    s.style.setProperty('--dur', (7 + Math.random()*7).toFixed(1)+'s');
     s.style.setProperty('--delay', (Math.random()*9).toFixed(1)+'s');
-    s.style.setProperty('--drift', (Math.random()*40-20).toFixed(0)+'px');
+    s.style.setProperty('--drift', (Math.random()*60-30).toFixed(0)+'px');
     holder.appendChild(s);
   }
 })();
