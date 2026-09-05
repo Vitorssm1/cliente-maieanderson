@@ -335,6 +335,8 @@ nav.main-nav a.nav-link:hover::after{width:100%;}
 .section-head h2{font-size:clamp(30px,3.6vw,44px);font-weight:500;line-height:1.15;position:relative;}
 .section-head p{margin-top:18px;font-size:16.5px;color:var(--ink-soft);max-width:56ch;}
 .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head.center h2,
+.section-head.center p{margin-left:auto;margin-right:auto;}
 .section-head.center .amp-mark{left:50%;transform:translateX(-50%);}
 
 /* ===================== SOBRE ===================== */
@@ -508,7 +510,7 @@ nav.main-nav a.nav-link:hover::after{width:100%;}
 
 /* ===================== FAQ ===================== */
 .faq{background:var(--cream);}
-.faq-list{max-width:780px;}
+.faq-list{max-width:780px;margin-left:auto;margin-right:auto;}
 .faq-item{border-bottom:1px solid var(--line-strong);}
 .faq-q{
   width:100%;text-align:left;background:none;border:none;cursor:pointer;
@@ -822,7 +824,7 @@ footer{background:#1b1510;color:rgba(251,247,238,0.85);padding:72px 0 30px;}
 <!-- FAQ -->
 <section class="faq section" id="faq">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="section-head reveal center">
       <span class="amp-mark" aria-hidden="true">&amp;</span>
       <h2>Perguntas frequentes</h2>
     </div>
