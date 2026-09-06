@@ -567,11 +567,15 @@ footer{background:#1b1510;color:rgba(251,247,238,0.85);padding:72px 0 30px;}
 
 /* ===================== SCROLL PROGRESS ===================== */
 .scroll-progress{
-  position:fixed;top:0;left:0;right:0;height:3px;z-index:200;
-  background:linear-gradient(90deg,var(--wine),var(--gold));
-  transform:scaleX(0);transform-origin:0 50%;
-  will-change:transform;
+  position:fixed;top:0;left:0;right:0;height:3px;z-index:250;
+  background:rgba(34,27,22,0.10);
   pointer-events:none;
+}
+.scroll-progress::after{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:100%;
+  background:linear-gradient(90deg,var(--wine),var(--gold));
+  transform:scaleX(var(--p,0));transform-origin:0 50%;
+  will-change:transform;
 }
 
 /* Skip link */
@@ -951,7 +955,7 @@ footer{background:#1b1510;color:rgba(251,247,238,0.85);padding:72px 0 30px;}
         floatWa.classList.toggle('show', y > 500);
         if(progress){
           const max = document.documentElement.scrollHeight - window.innerHeight;
-          progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
+          progress.style.setProperty('--p', max > 0 ? Math.min(y / max, 1) : 0);
         }
         ticking = false;
       });
