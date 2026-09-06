@@ -44,7 +44,7 @@
         floatWa.classList.toggle('show', y > 500);
         if(progress){
           const max = document.documentElement.scrollHeight - window.innerHeight;
-          progress.style.setProperty('--p', max > 0 ? Math.min(y / max, 1) : 0);
+          progress.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
         }
         ticking = false;
       });

@@ -556,15 +556,11 @@ footer{background:#1b1510;color:rgba(251,247,238,0.85);padding:72px 0 30px;}
 
 /* ===================== SCROLL PROGRESS ===================== */
 .scroll-progress{
-  position:fixed;top:0;left:0;right:0;height:3px;z-index:250;
-  background:rgba(34,27,22,0.10);
-  pointer-events:none;
-}
-.scroll-progress::after{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:100%;
+  position:absolute;left:0;bottom:0;height:2px;width:0%;
   background:linear-gradient(90deg,var(--wine),var(--gold));
-  transform:scaleX(var(--p,0));transform-origin:0 50%;
-  will-change:transform;
+  box-shadow:0 0 10px rgba(175,138,81,0.55);
+  transition:width .1s linear;
+  pointer-events:none;
 }
 
 /* Skip link */
